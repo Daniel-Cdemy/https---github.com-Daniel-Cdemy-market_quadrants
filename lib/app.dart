@@ -8,7 +8,7 @@ class MarketApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Ein Markt, vier Zustände – Riverpod',
+      title: 'Diagonale Counter',
       theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.blueGrey),
       home: const DashboardPage(),
     );

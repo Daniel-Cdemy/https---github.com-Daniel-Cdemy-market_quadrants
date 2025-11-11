@@ -11,10 +11,6 @@ class DashboardPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final bot = ref.watch(botProvider);
 
-    // optional responsiv:
-    final width = MediaQuery.of(context).size.width;
-    final cols = width > 600 ? 3 : 2;
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Summe: ${bot.sum.toStringAsFixed(2)}'),
@@ -26,7 +22,7 @@ class DashboardPage extends ConsumerWidget {
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: GridView.count(
-              crossAxisCount: cols,
+              crossAxisCount: 2,
               shrinkWrap: true,
               childAspectRatio: 1,
               mainAxisSpacing: 12,

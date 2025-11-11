@@ -1,5 +1,5 @@
 class BotState {
-  final List<double> markets; // [Q0, Q1, Q2, Q3]
+  final List<double> markets;
   const BotState(this.markets);
 
   BotState updated(int index, double newValue) {

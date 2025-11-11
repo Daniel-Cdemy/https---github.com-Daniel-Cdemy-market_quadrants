@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class MarketQuadrant extends StatelessWidget {
-  final int index;                       // 0..3
-  final double value;                    // aktueller Marktwert
-  final int targetIndex;                 // diagonales Ziel
-  final void Function(double) onDelta;   // Callback (+1 / -1)
+  final int index;
+  final double value;
+  final int targetIndex;
+  final void Function(double) onDelta;
 
   const MarketQuadrant({
     super.key,
@@ -22,13 +22,7 @@ class MarketQuadrant extends StatelessWidget {
         padding: const EdgeInsets.all(12),
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Q$index', style: Theme.of(context).textTheme.titleMedium),
-                Text('→ Q$targetIndex', style: Theme.of(context).textTheme.labelLarge),
-              ],
-            ),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween),
             const SizedBox(height: 12),
             Expanded(
               child: Center(
